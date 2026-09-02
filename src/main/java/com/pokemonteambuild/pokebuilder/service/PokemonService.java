@@ -14,9 +14,9 @@ public class PokemonService {
         this.restClient = RestClient.create();
     }
 
-    public PokemonDto getPikachu() {
+    public PokemonDto getPokemon() {
         String rawResponse = restClient.get()
-                                       .uri("https://pokeapi.co/api/v2/pokemon/pikachu")
+                                       .uri("https://pokeapi.co/api/v2/pokemon/{name}")
                                        .retrieve()
                                        .body(String.class);
 
